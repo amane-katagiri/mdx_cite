@@ -48,8 +48,8 @@ class CiteExtension(markdown.extensions.Extension):
         md.inlinePatterns.add('cite', SimpleTagPattern(CITE_RE, 'cite'), '<not_strong')
 
 
-def makeExtension(configs={}):
-    return CiteExtension(configs=dict(configs))
+def makeExtension(*args, **kwargs):
+    return CiteExtension(*args, **kwargs)
 
 
 if __name__ == "__main__":
